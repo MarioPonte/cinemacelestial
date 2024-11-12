@@ -1,7 +1,9 @@
+import { CustomTrigger } from "./sidebar-trigger";
+
 function Navbar() {
     return (
-        <nav>
-            <span className="text-lg text-blue-800">Cinema Celestial</span>
+        <nav className="bg-blue-50 p-2">
+            <CustomTrigger />
         </nav>
     )
 }
