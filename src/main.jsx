@@ -4,23 +4,19 @@ import App from './App.jsx'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import About from './pages/About.jsx'
-import MoviePage from './components/MoviePage.jsx'
-import { SidebarProvider } from "@/components/ui/sidebar"
-import { AppSidebar } from './components/app-sidebar.jsx'
+import MoviePage from './pages/MoviePage.jsx'
+import Movies from './pages/Movies.jsx'
 import Footer from './components/Footer.jsx'
 
 const Layout = () => {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <div className='w-full bg-sky-950'>
-        <div className='min-h-screen'>
-          <Navbar />
-          <Outlet />
-        </div>
-        <Footer />
-      </div>
-    </SidebarProvider>
+    <section className='bg-blue-950 flex flex-col min-h-screen'>
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
+    </section>
   )
 }
 
@@ -35,6 +31,10 @@ const router = createBrowserRouter([{
     {
       path: '/sobre',
       element: <About />
+    },
+    {
+      path: '/filmes',
+      element: <Movies />
     },
     {
       path: '/filmes/:slug',
