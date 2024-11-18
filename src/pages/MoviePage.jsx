@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { movies } from "@/cinemaData/movies";
 import Container from "@/components/Container";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function MoviePage() {
   const { slug } = useParams();
@@ -49,6 +50,30 @@ function MoviePage() {
         </div>
         <div>
           <iframe className="w-[800px] h-[400px] rounded-md" src={`https://www.youtube.com/embed/${movie.trailer}`} allowFullscreen="true"></iframe>
+        </div>
+      </div>
+
+      <div>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl font-semibold">Sessões disponíveis:</h2>
+          <Tabs defaultValue="hoje">
+            <TabsList className="bg-transparent border-2">
+              <TabsTrigger value="hoje">Hoje</TabsTrigger>
+              <TabsTrigger value="amanha">Amanhã</TabsTrigger>
+              <TabsTrigger value="quarta">Quarta-feira 20/11</TabsTrigger>
+              <TabsTrigger value="quinta">Quinta-feira 21/11</TabsTrigger>
+              <TabsTrigger value="sexta">Sexta-feira 22/11</TabsTrigger>
+              <TabsTrigger value="sabado">Sábado 23/11</TabsTrigger>
+              <TabsTrigger value="domingo">Domingo 2/11</TabsTrigger>
+            </TabsList>
+            <TabsContent value="hoje">
+              <div>
+                <p>Sala 2 - 18:00</p>
+                <p>Sala 1 - 18:45</p>
+              </div>
+            </TabsContent>
+            <TabsContent value="amanha">Change your password here.</TabsContent>
+          </Tabs>
         </div>
       </div>
     </Container>
