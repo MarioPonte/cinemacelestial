@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { movies } from "@/cinemaData/movies";
 import Container from "@/components/Container";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
+import SessionDay from "@/components/session-day";
 
 function MoviePage() {
   const { slug } = useParams();
@@ -15,6 +16,26 @@ function MoviePage() {
   }, [slug]);
 
   if (!movie) return <div>Filme não encontrado.</div>;
+
+  const dates = [];
+  const today = new Date();
+  const weekDays = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+
+  for (let i = 0; i < 7; i++) {
+    const nextDay = new Date(today); // Copia a data atual
+    nextDay.setDate(today.getDate() + i); // Adiciona dias incrementais
+
+    // Formata a data como DD/MM
+    const day = String(nextDay.getDate()).padStart(2, '0');
+    const month = String(nextDay.getMonth() + 1).padStart(2, '0');
+    const formattedDate = `${day}/${month}`;
+
+    // Obtém o nome do dia da semana
+    const weekDay = weekDays[nextDay.getDay()];
+
+    // Adiciona o objeto ao array
+    dates.push({ weekDay, day: formattedDate });
+  }
 
   return (
     <Container>
@@ -49,30 +70,51 @@ function MoviePage() {
           </div>
         </div>
         <div>
-          <iframe className="w-[800px] h-[400px] rounded-md" src={`https://www.youtube.com/embed/${movie.trailer}`} allowFullscreen="true"></iframe>
+          <iframe className="w-[800px] h-[400px] rounded-md" src={`https://www.youtube.com/embed/${movie.trailer}`} allowFullScreen={true}></iframe>
         </div>
       </div>
 
       <div>
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl font-semibold">Sessões disponíveis:</h2>
-          <Tabs defaultValue="hoje">
-            <TabsList className="bg-transparent border-2">
-              <TabsTrigger value="hoje">Hoje</TabsTrigger>
-              <TabsTrigger value="amanha">Amanhã</TabsTrigger>
-              <TabsTrigger value="quarta">Quarta-feira 20/11</TabsTrigger>
-              <TabsTrigger value="quinta">Quinta-feira 21/11</TabsTrigger>
-              <TabsTrigger value="sexta">Sexta-feira 22/11</TabsTrigger>
-              <TabsTrigger value="sabado">Sábado 23/11</TabsTrigger>
-              <TabsTrigger value="domingo">Domingo 2/11</TabsTrigger>
+          <Tabs defaultValue="Hoje">
+            <TabsList className="bg-transparent border-2 h-16">
+              <SessionDay weekDay="Hoje" day={dates[0].day} />
+              <SessionDay weekDay="Amanhã" day={dates[1].day} />
+              <SessionDay weekDay={dates[2].weekDay} day={dates[2].day} />
+              <SessionDay weekDay={dates[3].weekDay} day={dates[3].day} />
+              <SessionDay weekDay={dates[4].weekDay} day={dates[4].day} />
+              <SessionDay weekDay={dates[5].weekDay} day={dates[5].day} />
+              <SessionDay weekDay={dates[6].weekDay} day={dates[6].day} />
             </TabsList>
-            <TabsContent value="hoje">
-              <div>
-                <p>Sala 2 - 18:00</p>
-                <p>Sala 1 - 18:45</p>
+            <TabsContent value="Hoje" className="mt-6">
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold">Sala 2</h3>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">15:10</span>
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">18:00</span>
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">20:30</span>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold">Sala 1</h3>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">12:00</span>
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">14:35</span>
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">17:05</span>
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">20:45</span>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold">Sala 3</h3>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">13:00</span>
+                  </div>
+                </div>
               </div>
             </TabsContent>
-            <TabsContent value="amanha">Change your password here.</TabsContent>
+            <TabsContent value="Amanhã">Change your password here.</TabsContent>
           </Tabs>
         </div>
       </div>
