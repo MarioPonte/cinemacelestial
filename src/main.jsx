@@ -7,6 +7,7 @@ import About from './pages/About.jsx'
 import MoviePage from './pages/MoviePage.jsx'
 import Movies from './pages/Movies.jsx'
 import Footer from './components/Footer.jsx'
+import Products from './pages/Products'
 
 const Layout = () => {
   return (
@@ -39,6 +40,10 @@ const router = createBrowserRouter([{
     {
       path: '/filmes/:slug',
       element: <MoviePage />
+    },
+    {
+      path: '/produtos',
+      element: <Products />
     },
   ]
 }])

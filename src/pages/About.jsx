@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import HeaderOne from "@/components/textElements/HeaderOne";
 import {
     Accordion,
     AccordionContent,
@@ -9,7 +10,7 @@ import {
 function About() {
     return (
         <Container>
-            <h1 className="text-4xl font-semibold text-blue-100">Sobre o Cinema Celestial</h1>
+            <HeaderOne>Sobre o Cinema Celestial</HeaderOne>
             <div className="flex flex-col gap-10">
                 <p>
                     Bem-vindo ao Cinema Celestial, um lugar onde a magia do cinema ganha vida e os sonhos são projetados na grande tela.

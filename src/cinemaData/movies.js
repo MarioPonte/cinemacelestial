@@ -29,4 +29,34 @@ export const movies = [
     "poster": "redone.jpg",
     "trailer": "YToIl7WXsaU"
   },
+  {
+    "id": 3,
+    "title": "Gladiador II",
+    "slug": "gladiador-2",
+    "year": 2024,
+    "genre": "Ação",
+    "duration": 148,
+    "classification": 16,
+    "release": "14-11-2024",
+    "director": "Ridley Scott",
+    "actors": "Paul Mescal, Denzel Washington, Connie Nielsen",
+    "details": "Anos depois de testemunhar a morte do venerado herói Maximus às mãos do seu tio, Lucius é forçado a entrar no Coliseu depois da sua casa ter sido conquistada por tirânicos imperadores que agora lideram Roma com mão de ferro. Com um sentimento de revolta e o futuro do Império em jogo, Lucius terá de olhar para o seu passado como forma de encontrar força e devolver a honra e glória de Roma ao seu povo.",
+    "poster": "gladiador.jpg",
+    "trailer": "9MGX1CAuDLY"
+  },
+  {
+    "id": 4,
+    "title": "Gru - O Maldisposto 4 (VP)",
+    "slug": "gru-4",
+    "year": 2024,
+    "genre": "Animação",
+    "duration": 95,
+    "classification": 6,
+    "release": "27-06-2024",
+    "director": "Chris Renaud, Patrick Delage",
+    "actors": "Manuel Marques, Rita Blanco, Carlos Macedo",
+    "details": "Sete anos passados, Gru, o supervilão favorito do mundo, que se tornou agente da Liga Anti-Vilões, regressa para uma nova e excitante era de caos em “Gru - O Maldisposto 4”, da Illumination. Após o fenómeno de sucesso de bilheteira do verão de 2022, “Mínimos: A Ascensão de Gru”, que rendeu quase mil milhões de dólares em todo o mundo, o maior franchise global de animação da História inicia agora um novo capítulo com Gru, Lucy, as suas filhas Margo, Edith e Agnes - dando as boas-vindas a um novo membro da família Gru, Gru Jr., que tem fortes intenções de atormentar o seu pai. Gru enfrenta ainda um novo vilão, Maxime Le Mal e a sua namorada Valentina, o quais obrigam a sua família a fugir.",
+    "poster": "gru.jpg",
+    "trailer": "EoCCElZmJhk"
+  },
 ]
