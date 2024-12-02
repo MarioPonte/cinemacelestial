@@ -60,3 +60,36 @@ export const movies = [
     "trailer": "EoCCElZmJhk"
   },
 ]
+
+export const nextLaunches = [
+  {
+    "id": 1,
+    "title": "Mufasa - O Rei Leão",
+    "slug": "mufasa",
+    "year": 2024,
+    "genre": "Aventura",
+    "duration": 118,
+    "classification": "N/A",
+    "release": "18-12-2024",
+    "director": "Barry Jenkins",
+    "actors": "Aaron Pierre, Seth Rogen, Kelvin Harrison Jr.",
+    "details": "\"Mufasa: O Rei Leão\" conta a lenda da improvável ascensão do adorado rei das Terras do Reino, apresentando uma cria órfã chamada Mufasa, um simpático leão chamado Taka - o herdeiro de uma linhagem real - e a sua extensa viagem ao lado de um extraordinário grupo de inadaptados. Misturando técnicas de cinema de imagem real com imagens fotorrealistas geradas por computador, o novo filme é realizado por Barry Jenkins e conta com canções do premiado compositor Lin-Manuel Miranda e uma música original de Dave Metzger.",
+    "poster": "mufasa.jpg",
+    "trailer": "lviRsam2Ik4"
+  },
+  {
+    "id": 2,
+    "title": "Sonic 3: O Filme",
+    "slug": "sonic-3",
+    "year": 2024,
+    "genre": "Aventura",
+    "duration": 105,
+    "classification": "N/A",
+    "release": "22-12-2024",
+    "director": "Jeff Fowler",
+    "actors": "James Marsden, Jim Carrey, Idris Elba",
+    "details": "Sonic regressa ao grande ecrã, este Natal, com a sua aventura mais emocionante de sempre. Sonic, Knuckles e Tails reúnem-se contra um novo e poderoso adversário, Shadow, um vilão misterioso com poderes diferentes de tudo o que alguma vez tiveram de enfrentar. Ao terem as suas capacidades ultrapassadas em todos os aspetos, a Equipa Sonic tem de recorrer a uma aliança inesperada na esperança de conseguir deter Shadow e proteger o planeta.",
+    "poster": "sonic3.jpg",
+    "trailer": "5wPFEmYj6-I"
+  },
+]

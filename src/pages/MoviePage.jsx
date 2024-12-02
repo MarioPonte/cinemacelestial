@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { movies } from "@/cinemaData/movies";
+import { nextLaunches } from "@/cinemaData/movies";
 import Container from "@/components/Container";
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import SessionDay from "@/components/session-day";
@@ -11,7 +11,7 @@ function MoviePage() {
 
   useEffect(() => {
     // Procurar o filme correspondente ao slug
-    const foundMovie = movies.find((movie) => movie.slug === slug);
+    const foundMovie = nextLaunches.find((movie) => movie.slug === slug);
     setMovie(foundMovie);
   }, [slug]);
 

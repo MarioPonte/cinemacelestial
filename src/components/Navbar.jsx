@@ -19,7 +19,7 @@ function Navbar() {
                     <Film className="h-5" />
                     <span>Filmes</span>
                 </a>
-                <a href="/" className="flex items-center w-fit gap-1 rounded-md border-2 border-white/25 p-1">
+                <a href="/proximos-lancamentos" className="flex items-center w-fit gap-1 rounded-md border-2 border-white/25 p-1">
                     <Clapperboard className="h-5" />
                     <span>Próximos Lançamentos</span>
                 </a>
