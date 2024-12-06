@@ -9,6 +9,7 @@ import Movies from './pages/Movies.jsx'
 import Footer from './components/Footer.jsx'
 import Products from './pages/Products'
 import NextLaunches from './pages/NextMovies'
+import LaunchesMoviePage from './pages/LaunchesMoviePage'
 
 const Layout = () => {
   return (
@@ -39,12 +40,16 @@ const router = createBrowserRouter([{
       element: <Movies />
     },
     {
+      path: '/filmes/:slug',
+      element: <MoviePage />
+    },
+    {
       path: '/proximos-lancamentos',
       element: <NextLaunches />
     },
     {
-      path: '/filmes/:slug',
-      element: <MoviePage />
+      path: '/proximos-lancamentos/:slug',
+      element: <LaunchesMoviePage />
     },
     {
       path: '/produtos',

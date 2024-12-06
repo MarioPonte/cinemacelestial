@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { movies } from "@/cinemaData/movies";
+import { nextLaunches } from "@/cinemaData/movies";
 import Container from "@/components/Container";
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import SessionDay from "@/components/session-day";
 
-function MoviePage() {
+function LaunchesMoviePage() {
   const { slug } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    const foundMovie = movies.find((movie) => movie.slug === slug);
+    const foundMovie = nextLaunches.find((movie) => movie.slug === slug);
     setMovie(foundMovie);
   }, [slug]);
 
@@ -72,50 +72,11 @@ function MoviePage() {
 
       <div>
         <div className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold">Sessões disponíveis:</h2>
-          <Tabs defaultValue="Hoje">
-            <TabsList className="bg-transparent border-2 h-16">
-              <SessionDay weekDay="Hoje" day={dates[0].day} />
-              <SessionDay weekDay="Amanhã" day={dates[1].day} />
-              <SessionDay weekDay={dates[2].weekDay} day={dates[2].day} />
-              <SessionDay weekDay={dates[3].weekDay} day={dates[3].day} />
-              <SessionDay weekDay={dates[4].weekDay} day={dates[4].day} />
-              <SessionDay weekDay={dates[5].weekDay} day={dates[5].day} />
-              <SessionDay weekDay={dates[6].weekDay} day={dates[6].day} />
-            </TabsList>
-            <TabsContent value="Hoje" className="mt-6">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-xl font-semibold">Sala 2</h3>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">15:10</span>
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">18:00</span>
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">20:30</span>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-xl font-semibold">Sala 1</h3>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">12:00</span>
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">14:35</span>
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">17:05</span>
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">20:45</span>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-xl font-semibold">Sala 3</h3>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="border-2 rounded-md border-sky-200/50 text-sky-200/50 p-1 text-sm w-fit">13:00</span>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="Amanhã">Change your password here.</TabsContent>
-          </Tabs>
+          <h2 className="text-2xl font-semibold">Filme disponivel brevemente</h2>
         </div>
       </div>
     </Container>
   );
 }
 
-export default MoviePage;
+export default LaunchesMoviePage;

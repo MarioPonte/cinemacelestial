@@ -59,6 +59,21 @@ export const movies = [
     "poster": "gru.jpg",
     "trailer": "EoCCElZmJhk"
   },
+  {
+    "id": 5,
+    "title": "Vaiana 2",
+    "slug": "vaiana-2",
+    "year": 2024,
+    "genre": "Animação",
+    "duration": 101,
+    "classification": 6,
+    "release": "28-11-2024",
+    "director": "David G. Derrick Jr.",
+    "actors": "Auli'i Cravalho, Dwayne Johnson, Alan Tudyk",
+    "details": "Depois de receber uma chamada inesperada dos seus antepassados, Vaiana viaja ao lado de Maui e de uma nova tripulação para os mares longínquos da Oceânia e para as águas perigosas e há muito perdidas, numa aventura diferente de tudo o que alguma vez enfrentou.",
+    "poster": "vaiana.jpg",
+    "trailer": "RUHQBERZEVA"
+  },
 ]
 
 export const nextLaunches = [

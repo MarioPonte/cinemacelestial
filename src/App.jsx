@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { movies } from "@/cinemaData/movies";
+import PromotionCard from "./components/PromotionCard";
 
 function App() {
   return (
@@ -55,17 +56,27 @@ function App() {
           No Cinema Celestial, acreditamos que o cinema é mais do que assistir a filmes, é uma oportunidade de criar momentos especiais.
           Por isso, oferecemos uma variedade de promoções exclusivas e eventos temáticos que trazem ainda mais diversão e interação para o nosso público.
         </p>
-        <div className="bg-neutral-400">
-          <h2 className="text-2xl font-semibold">Sessões exclusivas</h2>
-          <p>Temos espaço disponível para eventos corporativos, festas de aniversário e sessões exclusivas.</p>
-        </div>
-        <div className="bg-neutral-400">
-          <h2 className="text-2xl font-semibold">O nosso bar</h2>
-          <p>Temos espaço disponível para eventos corporativos, festas de aniversário e sessões exclusivas.</p>
-        </div>
-        <div className="bg-neutral-400">
-          <h2 className="text-2xl font-semibold">Descontos para Grupos e Famílias</h2>
-          <p>Temos espaço disponível para eventos corporativos, festas de aniversário e sessões exclusivas.</p>
+        <div className="flex flex-wrap justify-center gap-6 m-auto">
+          <PromotionCard
+            title="Sessões exclusivas"
+            description="Temos espaço disponível para eventos corporativos, festas de aniversário e sessões exclusivas."
+            background="cinemaRoom.jpg"
+          />
+          <PromotionCard
+            title="O nosso bar"
+            description="Prepare-se para saborear os melhores acompanhamentos enquanto assiste ao seu filme favorito"
+            background="barProducts.jpg"
+          />
+          <PromotionCard
+            title="Descontos para Grupos e Famílias"
+            description="Aproveite preços especiais para grupos e famílias! Traga sua turma e torne o momento no Cinema Celestial ainda mais divertido e acessível."
+            background="family.jpg"
+          />
+          <PromotionCard
+            title="Experiência VIP"
+            description="Assista aos seus filmes favoritos com o máximo conforto. Salas exclusivas, poltronas reclináveis e atendimento diferenciado esperam por si no Cinema Celestial!"
+            background="vip.jpg"
+          />
         </div>
       </Container>
     </section>
