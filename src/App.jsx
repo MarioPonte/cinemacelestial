@@ -46,6 +46,15 @@ function App() {
                 </div>
               </div>
             </CarouselItem>
+            <CarouselItem key={3} className="md:basis-1/2 lg:basis-1/6">
+              <div className="p-1">
+                <div className="bg-transparent flex justify-center">
+                  <a href={`/filmes/${movies[2].slug}`} className="flex w-fit p-2 hover:ring-2 ring-white/50 transition-all duration-100 rounded-lg">
+                    <img src={`/movies/${movies[2].poster}`} alt="Poster" className="h-80 rounded-lg" />
+                  </a>
+                </div>
+              </div>
+            </CarouselItem>
           </CarouselContent>
           <CarouselPrevious className="bg-black/25" />
           <CarouselNext className="bg-black/25" />

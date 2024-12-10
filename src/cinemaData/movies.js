@@ -74,6 +74,21 @@ export const movies = [
     "poster": "vaiana.jpg",
     "trailer": "RUHQBERZEVA"
   },
+  {
+    "id": 6,
+    "title": "John Wick 4: Baba Yaga",
+    "slug": "john-wick-4",
+    "year": 2023,
+    "genre": "Ação",
+    "duration": 170,
+    "classification": 14,
+    "release": "23-03-2023",
+    "director": "Chad Stahelski",
+    "actors": "Keanu Reeves, Donnie Yen, Bill Skarsgård",
+    "details": "O assassino profissional retorna às telas para John Wick 4: Baba Yaga. O assassino profissional John Wick (Keanu Reeves) agora virou metade do submundo contra ele com sua vingança, que agora está entrando em sua quarta rodada em Nova York, Berlim, Paris e Osaka. Sua equipe, composta por Bowery King (Laurence Fishburne), o gerente do hotel Winston (Ian McShane) e o concierge Charon (Lance Reddick) do lendário hotel assassino Continental, novamente fazem parte da festa. No entanto, as chances de escapar desta vez parecem quase impossíveis, pois o maior inimigo está surgindo. O implacável chefe do submundo Marquis de Gramont (Bill Skarsgård), que tem alianças inteiras atrás dele, representa a maior e sanguinária ameaça até hoje. Mas seus capangas também são durões, incluindo Shimazu (Hiroyuki Sanada) e Killa (Scott Adkins) localizados. Felizmente, existem velhos aliados como Caine (Donnie Yen) que correm para ajudar Wick. Não há caminho de volta, só um sobrevive.",
+    "poster": "johnwick.webp",
+    "trailer": "Ijo1NPtwq3g"
+  },
 ]
 
 export const nextLaunches = [
