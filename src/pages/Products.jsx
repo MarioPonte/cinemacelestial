@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import ProductCard from "@/components/ProductCard";
 import HeaderOne from "@/components/textElements/HeaderOne";
+import { CocaColaIcon, SpriteIcon } from "@/SVGFiles";
 
 function Products() {
   return (
@@ -27,7 +28,10 @@ function Products() {
             <div className="flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-semibold">Refrigerante</h3>
-                <span>aaa</span>
+                <div className="flex gap-1">
+                  <CocaColaIcon className="h-8 w-8 fill-white" />
+                  <SpriteIcon className="h-8 w-8 fill-white" />
+                </div>
               </div>
               <div className="flex gap-2 items-center">
                 <span className="text-xl font-semibold">1.50€</span>
@@ -40,7 +44,7 @@ function Products() {
             <div className="flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-semibold">Pipocas</h3>
-                <span>aaa</span>
+                <span>Doces / Salgadas</span>
               </div>
               <div className="flex gap-2 items-center">
                 <span className="text-xl font-semibold">2.50€</span>
@@ -53,7 +57,7 @@ function Products() {
             <div className="flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-semibold">Nachos</h3>
-                <span>aaa</span>
+                <span>Queijo</span>
               </div>
               <div className="flex gap-2 items-center">
                 <span className="text-xl font-semibold">3€</span>
@@ -66,7 +70,7 @@ function Products() {
             <div className="flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-semibold">Água</h3>
-                <span>aaa</span>
+                <span>Mineral</span>
               </div>
               <div className="flex gap-2 items-center">
                 <span className="text-xl font-semibold">1.50€</span>
@@ -75,7 +79,7 @@ function Products() {
           </div>
         </div>
       </div>
-      
+
     </Container>
   )
 }
